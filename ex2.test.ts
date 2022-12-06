@@ -152,35 +152,35 @@ describe('getStudentScoreBySubject', () => {
   });
 
 
-//   test('should be transform correctly with empty subject', () => {
-//     const store = [
-//       {
-//         subject: 'math',
-//         students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }],
-//       },
-//       {
-//         subject: 'computer',
-//         students: [{ name: 'luffy', score: 10 }],
-//       },
-//       {
-//         subject: 'science',
-//         students: [{ name: 'luffy', score: 15 }, { name: 'zoro', score: 25 }],
-//       },
+  test('should be transform correctly with empty subject', () => {
+    const store = [
+      {
+        subject: 'math',
+        students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }],
+      },
+      {
+        subject: 'computer',
+        students: [{ name: 'luffy', score: 10 }],
+      },
+      {
+        subject: 'science',
+        students: [{ name: 'luffy', score: 15 }, { name: 'zoro', score: 25 }],
+      },
       
-//     ]
-//     const result = getStudentScoreBySubject(store, ['math', 'computer']);
-//     const expected = [
-//       {
-//         name: 'luffy',
-//         math: 10,
-//         computer: 10,
-//       },
-//       {
-//         name: 'zoro',
-//         math: 15,
-//         computer: null,
-//       },
-//     ]
-//     expect(result).toEqual(expected)
-//   });
+    ]
+    const result = getStudentScoreBySubject(store, ['math', 'computer']);
+    const expected = [
+      {
+        name: 'luffy',
+        math: 10,
+        computer: 10,
+      },
+      {
+        name: 'zoro',
+        math: 15,
+        computer: null,
+      },
+    ]
+    expect(result).toEqual(expected)
+  });
   })
